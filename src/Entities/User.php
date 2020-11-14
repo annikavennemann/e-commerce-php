@@ -24,6 +24,16 @@ class User {
     /** 
      * @ORM\Column(type="string") 
      */
+    protected $firstName; 
+
+    /** 
+     * @ORM\Column(type="string") 
+     */
+    protected $lastName; 
+
+    /** 
+     * @ORM\Column(type="string") 
+     */
     protected $password;
 
     public function getId(): int {
@@ -40,6 +50,22 @@ class User {
 
     public function setEmail(string $email): void {
         $this->email = $email;
+    }
+
+    public function getFirstName(): string {
+        return $this->firstName;
+    }
+
+    public function setFirstName(string $firstName): void {
+        $this->firstName = $firstName;
+    }
+
+    public function getLastName(): string {
+        return $this->lastName;
+    }
+
+    public function setLastName(string $lastName): void {
+        $this->lastName = $lastName;
     }
 
     public function getPassword(): string {

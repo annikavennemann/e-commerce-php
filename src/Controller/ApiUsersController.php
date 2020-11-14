@@ -18,6 +18,9 @@ class ApiUsersController {
             $jsonUserArray[] = [
                 'id' => $user->getId(),
                 'email' => $user->getEmail(),
+                'firstName' => $user->getFirstName(),
+                'lastName' => $user->getLastName(),
+                'password' => $user->getPassword(),
             ];
         }
 
