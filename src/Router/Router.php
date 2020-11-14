@@ -7,13 +7,13 @@ use Twig\Environment;
 
 class Router {
     private $urlControllerMapping = [];
-    private $templateRenderer;
+    /*private $templateRenderer;*/
 
     public function __construct(array $urlControllerMapping) {
         $this->urlControllerMapping = $urlControllerMapping;
 
-        $loader = new FilesystemLoader(__dir__ . '/../templates');
-        $this->templateRenderer = new Environment($loader);
+        /*$loader = new FilesystemLoader(__dir__ . '/../templates');
+        $this->templateRenderer = new Environment($loader);*/
     }
 
     public function route(string $url) {
