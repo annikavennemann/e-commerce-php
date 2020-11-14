@@ -1,8 +1,7 @@
 <?php
+
 namespace NeueFische\Entities;
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
-
 
 /**
  * @ORM\Entity
@@ -31,16 +30,14 @@ class OrderedItem {
      */
     protected $price;
 
-
-    
-
-    /*private $order;
+    /**
+     * @ORM\ManyToOne(targetEntity="Order")
+     */
+    protected $order;
 
     public function setOrder(Order $o) {
         $this->order = $o;
-    }*/
-
-   
+    }
 
     public function getId(): int {
         return $this->id;
