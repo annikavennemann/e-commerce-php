@@ -1,12 +1,14 @@
 <?php
 namespace NeueFische\Entities;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="ordered_items")
  */
-class OrderedItems {
+class OrderedItem {
     /**
      * @ORM\Id
      * @ORM\Column(type="integer") 
@@ -28,6 +30,17 @@ class OrderedItems {
      * @ORM\Column(type="integer") 
      */
     protected $price;
+
+
+    
+
+    /*private $order;
+
+    public function setOrder(Order $o) {
+        $this->order = $o;
+    }*/
+
+   
 
     public function getId(): int {
         return $this->id;

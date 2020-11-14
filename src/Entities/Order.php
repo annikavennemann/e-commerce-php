@@ -2,14 +2,15 @@
 namespace NeueFische\Entities;
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * @ORM\Entity
- * @ORM\Table(name="orders")
+ * @ORM\Table(name="order")
  */
 class Order {
     /**
      * @ORM\Id
-     * @ORM\Column(type="integer") 
+     * @ORM\Column(type="integer" , name="order_id") 
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     protected $id;
@@ -29,6 +30,7 @@ class Order {
      */
     protected $total_sum;
 
+
     public function getId(): int {
         return $this->id;
     }
@@ -43,10 +45,10 @@ class Order {
         $this->customer_id = $customer_id;
     }
 
-    public function getCreatedDatetime(): object {
+    public function getCreatedDatetime(): DateTime {
         return $this->created_datetime;
     }
-    public function setCreatedDatetime(object $created_datetime): void {
+    public function setCreatedDatetime(DateTime $created_datetime): void {
         $this->created_datetime = $created_datetime;
     }
 
