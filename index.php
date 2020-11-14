@@ -19,4 +19,5 @@ $router = new Router(
     ]
 );
 
-$router->route($_SERVER['REQUEST_URI']);
+$splittedUrl = explode("?", $_SERVER['REQUEST_URI']);
+$router->route($splittedUrl[0]);
