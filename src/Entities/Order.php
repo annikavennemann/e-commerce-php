@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Order {
     /**
      * @ORM\Id
-     * @ORM\Column(type="integer" , name="order_id") 
+     * @ORM\Column(type="integer") 
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     protected $id;
@@ -18,17 +18,17 @@ class Order {
     /** 
      * @ORM\Column(type="integer") 
      */
-    protected $customer_id; 
+    protected $customerId; 
 
     /** 
      * @ORM\Column(type="datetime") 
      */
-    protected $created_datetime;
+    protected $createdDatetime;
 
     /** 
      * @ORM\Column(type="integer") 
      */
-    protected $total_sum;
+    protected $totalSum;
 
 
     public function getId(): int {
@@ -39,25 +39,28 @@ class Order {
     }
 
     public function getCustomerId(): int {
-        return $this->customer_id;
+        return $this->customerId;
     }
-    public function setCustomerId(int $customer_id): void {
-        $this->customer_id = $customer_id;
+    public function setCustomerId(int $customerId): void {
+        $this->customerId = $customerId;
     }
 
     public function getCreatedDatetime(): DateTime {
-        return $this->created_datetime;
+        return $this->createdDatetime;
     }
-    public function setCreatedDatetime(DateTime $created_datetime): void {
-        $this->created_datetime = $created_datetime;
+    public function setCreatedDatetime(DateTime $createdDatetime): void {
+        $this->createdDatetime = $createdDatetime;
     }
 
     public function getTotalSum(): int {
-        return $this->total_sum;
+        return $this->totalSum;
     }
-    public function setTotalSum(int $total_sum): void {
-        $this->total_sum = $total_sum;
+    public function setTotalSum(int $totalSum): void {
+        $this->totalSum = $totalSum;
 
     }
 
 }
+
+
+
