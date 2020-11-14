@@ -14,27 +14,20 @@ class Order {
      */
     protected $id;
 
-// oder vllt eine eigene Entity?
+    /** 
+     * @ORM\Column(type="integer") 
+     */
+    protected $customer_id; 
 
     /** 
-     * @ORM\Column(type="array") 
+     * @ORM\Column(type="datetime") 
      */
-    protected $item; 
+    protected $created_datetime;
 
     /** 
      * @ORM\Column(type="integer") 
      */
-    protected $price;
-
-    /** 
-     * @ORM\Column(type="string") 
-     */
-    protected $description;
-
-    /** 
-     * @ORM\Column(type="string") 
-     */
-    protected $usability;
+    protected $total_sum;
 
     public function getId(): int {
         return $this->id;
@@ -43,33 +36,26 @@ class Order {
         $this->id = $id;
     }
 
-    public function getName(): string {
-        return $this->name;
+    public function getCustomerId(): int {
+        return $this->customer_id;
     }
-    public function setName(string $name): void {
-        $this->name = $name;
-    }
-
-    public function getPrice(): float {
-        return $this->price;
-    }
-    public function setPrice(string $price): void {
-        $this->price = $price;
+    public function setCustomerId(int $customer_id): void {
+        $this->customer_id = $customer_id;
     }
 
-    public function getDescription(): string {
-        return $this->description;
+    public function getCreatedDatetime(): object {
+        return $this->created_datetime;
     }
-    public function setDescription(string $description): void {
-        $this->description = $description;
+    public function setCreatedDatetime(object $created_datetime): void {
+        $this->created_datetime = $created_datetime;
     }
 
-
-    public function getUsability(): string {
-        return $this->usability;
+    public function getTotalSum(): int {
+        return $this->total_sum;
     }
-    public function setUsability(string $usability): void {
-        $this->usability = $usability;
+    public function setTotalSum(int $total_sum): void {
+        $this->total_sum = $total_sum;
+
     }
 
 }
