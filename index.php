@@ -13,8 +13,9 @@ $router = new Router(
     [
         // Request URL => Destination Controller Class
         "/api/create-user" => ApiCreateUserController::class,
-        "/" => ApiUsersController::class,
         "/api/products" => ApiProductsController::class,
+        "/" => ApiUsersController::class,
+        
     ]
 );
 
