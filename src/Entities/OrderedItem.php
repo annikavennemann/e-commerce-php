@@ -1,8 +1,6 @@
 <?php
 namespace NeueFische\Entities;
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
-
 
 /**
  * @ORM\Entity
@@ -34,11 +32,11 @@ class OrderedItem {
 
     
 
-    /*private $order;
+    private $order;
 
     public function setOrder(Order $o) {
         $this->order = $o;
-    }*/
+    }
 
    
 
